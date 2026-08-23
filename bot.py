@@ -869,8 +869,9 @@ def main():
         entry_points=[MessageHandler(filters.Regex("^📝 እንደ ሰራተኛ መመዝገብ$"), staff_reg_start)],
         states={
             "STAFF_NAME": [MessageHandler(filters.TEXT & ~filters.COMMAND, staff_name)],
-            "STAFF_DEPT": [MessageHandler(filters.TEXT & \~filters.COMMAND, staff_dept)],
-            "STAFF_PHONE": [MessageHandler(filters.TEXT & \~filters.COMMAND, staff_phone)],
+            "STAFF_DEPT": [MessageHandler(filters.TEXT & ~filters.COMMAND, staff_dept)],
+            "STAFF_PHONE": [MessageHandler(filters.TEXT & ~filters.COMMAND, staff_phone)],
+
         },
         fallbacks=[CommandHandler("start", start)],
         allow_reentry=True
