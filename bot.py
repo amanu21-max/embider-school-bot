@@ -189,7 +189,13 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     db_user = get_user(user.id)
 
     if not db_user:
-        kb = [[KeyboardButton("📝 እንደ ሰራተኛ መመዝገብ")]]
+                kb = [
+            [KeyboardButton("📝 እንደ ሰራተኛ መመዝገብ")],
+            [KeyboardButton("👨‍🏫 መምህር መመዝገብ")],
+            [KeyboardButton("👨‍🎓 ተማሪ መመዝገብ")],
+            [KeyboardButton("📊 ሪፖርቶች"), KeyboardButton("👤 የኔ መረጃ")]
+        ]
+
         await update.message.reply_text(
             f"ሰላም {user.first_name}!\n\n"
             f"🏫 **{SCHOOL_NAME}**\n"
