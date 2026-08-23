@@ -906,12 +906,13 @@ tch_conv = ConversationHandler(
     asg_conv = ConversationHandler(
         entry_points=[MessageHandler(filters.Regex("^📅 የክፍል ድልድል$"), assign_start)],
         states={
-            "ASG_TEACHER": [MessageHandler(filters.TEXT & \~filters.COMMAND, asg_teacher)],
-            "ASG_GRADE": [MessageHandler(filters.TEXT & \~filters.COMMAND, asg_grade)],
-            "ASG_SECTION": [MessageHandler(filters.TEXT & \~filters.COMMAND, asg_section)],
-            "ASG_SUBJECT": [MessageHandler(filters.TEXT & \~filters.COMMAND, asg_subject)],
-            "ASG_DAY": [MessageHandler(filters.TEXT & \~filters.COMMAND, asg_day)],
-            "ASG_PERIOD": [MessageHandler(filters.TEXT & \~filters.COMMAND, asg_period)],
+            "ASG_TEACHER": [MessageHandler(filters.TEXT & ~filters.COMMAND, asg_teacher)],
+            "ASG_GRADE": [MessageHandler(filters.TEXT & ~filters.COMMAND, asg_grade)],
+            "ASG_SECTION": [MessageHandler(filters.TEXT & ~filters.COMMAND, asg_section)],
+            "ASG_SUBJECT": [MessageHandler(filters.TEXT & ~filters.COMMAND, asg_subject)],
+            "ASG_DAY": [MessageHandler(filters.TEXT & ~filters.COMMAND, asg_day)],
+            "ASG_PERIOD": [MessageHandler(filters.TEXT & ~filters.COMMAND, asg_period)],
+
         },
         fallbacks=[CommandHandler("start", start)],
         allow_reentry=True
@@ -921,10 +922,10 @@ tch_conv = ConversationHandler(
     exam_conv = ConversationHandler(
         entry_points=[MessageHandler(filters.Regex("^📝 ፈተና መፍጠር$"), exam_start)],
         states={
-            "EXAM_NAME": [MessageHandler(filters.TEXT & \~filters.COMMAND, exam_name)],
-            "EXAM_GRADE": [MessageHandler(filters.TEXT & \~filters.COMMAND, exam_grade)],
-            "EXAM_SUBJECT": [MessageHandler(filters.TEXT & \~filters.COMMAND, exam_subject)],
-            "EXAM_DATE": [MessageHandler(filters.TEXT & \~filters.COMMAND, exam_date)],
+            "EXAM_NAME": [MessageHandler(filters.TEXT & ~filters.COMMAND, exam_name)],
+            "EXAM_GRADE": [MessageHandler(filters.TEXT & ~filters.COMMAND, exam_grade)],
+            "EXAM_SUBJECT": [MessageHandler(filters.TEXT & ~filters.COMMAND, exam_subject)],
+            "EXAM_DATE": [MessageHandler(filters.TEXT & ~filters.COMMAND, exam_date)],
         },
         fallbacks=[CommandHandler("start", start)],
         allow_reentry=True
