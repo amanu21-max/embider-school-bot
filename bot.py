@@ -903,7 +903,7 @@ tch_conv = ConversationHandler(
     )
 
     # Class assignment
-    asg_conv = ConversationHandler(
+asg_conv = ConversationHandler(
         entry_points=[MessageHandler(filters.Regex("^📅 የክፍል ድልድል$"), assign_start)],
         states={
             "ASG_TEACHER": [MessageHandler(filters.TEXT & ~filters.COMMAND, asg_teacher)],
