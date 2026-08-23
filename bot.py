@@ -918,9 +918,9 @@ asg_conv = ConversationHandler(
         allow_reentry=True
     )
 
-    # Exam
+    # # Exam
 exam_conv = ConversationHandler(
-        entry_points=[MessageHandler(filters.Regex("^📝 ፈተና መፍጠር$"), exam_start)],
+        entry_points=[MessageHandler(filters.Regex("^📝 ፈተና መመዝገብ$"), exam_start)],
         states={
             "EXAM_NAME": [MessageHandler(filters.TEXT & ~filters.COMMAND, exam_name)],
             "EXAM_GRADE": [MessageHandler(filters.TEXT & ~filters.COMMAND, exam_grade)],
@@ -931,7 +931,7 @@ exam_conv = ConversationHandler(
         allow_reentry=True
     )
 
-    # Result
+# # Result
 res_conv = ConversationHandler(
         entry_points=[MessageHandler(filters.Regex("^📊 ውጤት ማስገባት$"), result_start)],
         states={
@@ -941,6 +941,7 @@ res_conv = ConversationHandler(
         },
         fallbacks=[CommandHandler("start", start)],
         allow_reentry=True
+    )
 app.add_handler(CommandHandler("start", start))
 app.add_handler(staff_conv)
 app.add_handler(stu_conv)
