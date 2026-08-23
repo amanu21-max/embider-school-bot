@@ -935,9 +935,9 @@ exam_conv = ConversationHandler(
 res_conv = ConversationHandler(
         entry_points=[MessageHandler(filters.Regex("^📊 ውጤት ማስገባት$"), result_start)],
         states={
-            "RES_EXAM": [MessageHandler(filters.TEXT & \~filters.COMMAND, res_exam)],
-            "RES_STUDENT": [MessageHandler(filters.TEXT & \~filters.COMMAND, res_student)],
-            "RES_SCORE": [MessageHandler(filters.TEXT & \~filters.COMMAND, res_score)],
+            "RES_EXAM": [MessageHandler(filters.TEXT & ~filters.COMMAND, res_exam)],
+            "RES_STUDENT": [MessageHandler(filters.TEXT & ~filters.COMMAND, res_student)],
+            "RES_SCORE": [MessageHandler(filters.TEXT & ~filters.COMMAND, res_score)],
         },
         fallbacks=[CommandHandler("start", start)],
         allow_reentry=True
