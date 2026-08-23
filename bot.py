@@ -195,8 +195,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             [KeyboardButton("👨‍🎓 ተማሪ መመዝገብ")],
             [KeyboardButton("📊 ሪፖርቶች"), KeyboardButton("👤 የኔ መረጃ")]
         ]
-
-        await update.message.reply_text(
+await update.message.reply_text(
             f"ሰላም {user.first_name}!\n\n"
             f"🏫 **{SCHOOL_NAME}**\n"
             f"የትምህርት ቤት አስተዳደር ቦት\n\n"
