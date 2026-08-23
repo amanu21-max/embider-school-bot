@@ -880,26 +880,25 @@ def main():
     # Student
     stu_conv = ConversationHandler(
         entry_points=[MessageHandler(filters.Regex("^👨‍🎓 ተማሪ መመዝገቢያ$"), student_start)],
-        states={
-            "STU_NAME": [MessageHandler(filters.TEXT & \~filters.COMMAND, stu_name)],
-            "STU_GENDER": [MessageHandler(filters.TEXT & \~filters.COMMAND, stu_gender)],
-            "STU_GRADE": [MessageHandler(filters.TEXT & \~filters.COMMAND, stu_grade)],
-            "STU_SECTION": [MessageHandler(filters.TEXT & \~filters.COMMAND, stu_section)],
-            "STU_PHONE": [MessageHandler(filters.TEXT & \~filters.COMMAND, stu_phone)],
+    states={
+            "STU_NAME": [MessageHandler(filters.TEXT & ~filters.COMMAND, stu_name)],
+            "STU_GENDER": [MessageHandler(filters.TEXT & ~filters.COMMAND, stu_gender)],
+            "STU_GRADE": [MessageHandler(filters.TEXT & ~filters.COMMAND, stu_grade)],
+            "STU_SECTION": [MessageHandler(filters.TEXT & ~filters.COMMAND, stu_section)],
+            "STU_PHONE": [MessageHandler(filters.TEXT & ~filters.COMMAND, stu_phone)],
         },
         fallbacks=[CommandHandler("start", start)],
         allow_reentry=True
     )
 
-    # Teacher
-    tch_conv = ConversationHandler(
-        entry_points=[MessageHandler(filters.Regex("^👩‍🏫 መምህር መመዝገቢያ$"), teacher_start)],
+# Teacher
+tch_conv = ConversationHandler(
+        entry_points=[MessageHandler(filters.Regex("^👨‍🏫 መምህር መመዝገብ$"), teacher_start)],
         states={
-            "TCH_NAME": [MessageHandler(filters.TEXT & \~filters.COMMAND, tch_name)],
-            "TCH_GENDER": [MessageHandler(filters.TEXT & \~filters.COMMAND, tch_gender)],
-            "TCH_SUBJECT": [MessageHandler(filters.TEXT & \~filters.COMMAND, tch_subject)],
-            "TCH_DEPT": [MessageHandler(filters.TEXT & \~filters.COMMAND, tch_dept)],
-            "TCH_PHONE": [MessageHandler(filters.TEXT & \~filters.COMMAND, tch_phone)],
+            "TCH_NAME": [MessageHandler(filters.TEXT & ~filters.COMMAND, tch_name)],
+            "TCH_GENDER": [MessageHandler(filters.TEXT & ~filters.COMMAND, tch_gender)],
+            "TCH_SUBJECT": [MessageHandler(filters.TEXT & ~filters.COMMAND, tch_subject)],
+
         },
         fallbacks=[CommandHandler("start", start)],
         allow_reentry=True
