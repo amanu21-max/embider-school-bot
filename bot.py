@@ -868,7 +868,7 @@ def main():
     staff_conv = ConversationHandler(
         entry_points=[MessageHandler(filters.Regex("^📝 እንደ ሰራተኛ መመዝገብ$"), staff_reg_start)],
         states={
-            "STAFF_NAME": [MessageHandler(filters.TEXT & \~filters.COMMAND, staff_name)],
+            "STAFF_NAME": [MessageHandler(filters.TEXT & ~filters.COMMAND, staff_name)],
             "STAFF_DEPT": [MessageHandler(filters.TEXT & \~filters.COMMAND, staff_dept)],
             "STAFF_PHONE": [MessageHandler(filters.TEXT & \~filters.COMMAND, staff_phone)],
         },
