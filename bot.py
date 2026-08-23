@@ -956,10 +956,8 @@ app.add_handler(MessageHandler(filters.Regex("^👤 የኔ መረጃ$"), my_info
 app.add_handler(MessageHandler(filters.Regex("^ℹ️ ስለ ትምህርት ቤቱ$"), about))
 app.add_handler(CallbackQueryHandler(admin_callback, pattern="^(approve|reject)_"))
 app.add_handler(CallbackQueryHandler(report_callback, pattern="^rep_"))
-
-    print(f"✅ {SCHOOL_NAME} ቦት በተሳካ ሁኔታ ተጀምሯል...")
-    print(f"📞 {PHONE} | በ{DEVELOPER} የተሰራ")
-    app.run_polling(allowed_updates=Update.ALL_TYPES)
-
+print(f"✅ {SCHOOL_NAME} ቦት በተሳካ ሁኔታ ተጀምሯል...")
+print(f"📞 {PHONE} | በ{DEVELOPER} የተሰራ")
+app.run_polling(allowed_updates=Update.ALL_TYPES)
 if __name__ == "__main__":
     main()
