@@ -959,5 +959,5 @@ application.add_handler(CallbackQueryHandler(report_callback, pattern="^rep_"))
 print(f"✅ {SCHOOL_NAME} ቦት በተሳካ ሁኔታ ተጀምሯል...")
 print(f"📞 {PHONE} | 👤 {DEVELOPER} የተሰራ")
 if __name__ == "__main__":
-application.run_polling(allowed_updates=Update.ALL_TYPES)
+     application.run_polling(allowed_updates=Update.ALL_TYPES)
 
