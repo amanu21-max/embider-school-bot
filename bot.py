@@ -875,9 +875,7 @@ def main():
         },
         fallbacks=[CommandHandler("start", start)],
         allow_reentry=True
-    )
-
-    # Student
+    )# Student
     stu_conv = ConversationHandler(
         entry_points=[MessageHandler(filters.Regex("^👨‍🎓 ተማሪ መመዝገቢያ$"), student_start)],
     states={
