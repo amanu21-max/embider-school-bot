@@ -27,7 +27,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ====================== CONFIG - እዚህ ይቀይሩ ======================
-BOT_TOKEN = os.getenv("BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8560657406:AAEYxwOEi6OyTYRpAn2kC6UvL_lQtOAdzc8")
 SCHOOL_NAME = "እምድብር አጠቃላይ ሁለተኛ ደረጃ ትምህርት ቤት"
 DEVELOPER = "አማኑኤል መኮንን"
 PHONE = "0920772686"
