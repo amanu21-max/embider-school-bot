@@ -919,7 +919,7 @@ asg_conv = ConversationHandler(
     )
 
     # Exam
-    exam_conv = ConversationHandler(
+exam_conv = ConversationHandler(
         entry_points=[MessageHandler(filters.Regex("^📝 ፈተና መፍጠር$"), exam_start)],
         states={
             "EXAM_NAME": [MessageHandler(filters.TEXT & ~filters.COMMAND, exam_name)],
@@ -932,7 +932,7 @@ asg_conv = ConversationHandler(
     )
 
     # Result
-    res_conv = ConversationHandler(
+res_conv = ConversationHandler(
         entry_points=[MessageHandler(filters.Regex("^📊 ውጤት ማስገባት$"), result_start)],
         states={
             "RES_EXAM": [MessageHandler(filters.TEXT & \~filters.COMMAND, res_exam)],
