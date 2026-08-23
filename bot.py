@@ -942,8 +942,7 @@ res_conv = ConversationHandler(
         fallbacks=[CommandHandler("start", start)],
         allow_reentry=True
     )
-
-    app.add_handler(CommandHandler("start", start))
+app.add_handler(CommandHandler("start", start))
     app.add_handler(staff_conv)
     app.add_handler(stu_conv)
     app.add_handler(tch_conv)
