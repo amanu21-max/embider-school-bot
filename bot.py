@@ -943,11 +943,8 @@ res_conv = ConversationHandler(
         allow_reentry=True
     )
 application.add_handler(CommandHandler("start", start))
-application.add_handler(staff_conv)
-application.add_handler(stu_conv)
-application.add_handler(tch_conv)
-application.add_handler(asg_conv)
-application.add_handler(exam_conv)
+
+
 application.add_handler(res_conv)
 application.add_handler(MessageHandler(filters.Regex("^📅 የኔ ሰሌዳ$"), my_schedule))
 application.add_handler(MessageHandler(filters.Regex("^⚙️ አስተዳደር ፓነል$"), admin_panel))
