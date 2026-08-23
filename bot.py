@@ -4,7 +4,13 @@ import sqlite3
 from datetime import datetime
 from io import BytesIO
 from typing import Optional, List
+import asyncio
+import sys
 
+try:
+    asyncio.get_event_loop()
+except RuntimeError:
+    asyncio.set_event_loop(asyncio.new_event_loop())
 import pandas as pd
 import matplotlib.pyplot as plt
 from reportlab.lib.pagesizes import A4
