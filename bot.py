@@ -44,7 +44,7 @@ DEPARTMENTS = [
     "ዲፓርትመንት ሀላፊ",
     "አጠቃላይ እስታፍ"
 ]
-
+application = Application.builder().token(BOT_TOKEN).build()
 GRADES = ["9ኛ", "10ኛ", "11ኛ", "12ኛ"]
 SECTIONS = ["A", "B", "C", "D", "E"]
 DAYS = ["ሰኞ", "ማክሰኞ", "ረቡዕ", "ሐሙስ", "አርብ"]
